@@ -113,7 +113,7 @@ function Header() {
                   </a></li>
                 <li className="js35eu-0 cXgXUQ">
                   <div className="js35eu-4 cXOKlA">›</div>
-                  <div className="js35eu-6 cYfDtS">PDF sang Word</div>
+                  <div className="js35eu-6 cYfDtS">GIẤY CMND</div>
                 </li>
               </ol>
               <div className="sc-1ttxsn1-0 fxCLCz">
@@ -168,8 +168,14 @@ function Header() {
                                     </div>
                                     <div className="sc-1rkezdt-6 cxdwsz">hoặc thả các file ảnh ở đây
                                     </div>
+                                    <div className="form-controls">
+                                      <div className="controls submit-controls" style={{margin: '10px'}}>
+                                        <button type="submit">BẮT ĐẦU TRÍCH XUẤT</button>
+                                      </div>
+                                    </div>
                                   </div>
-                                </label></form>
+                                </label>
+                                </form>
                             </div>
                           </div>
                         </div>
@@ -180,25 +186,61 @@ function Header() {
                             <div className="sc-1rkezdt-2 cwvKbP" />
                             <div className="sc-1rkezdt-3 cwEgFY">
                               <form className="sc-1oqtgb8-1 fqHzAf">
-                                <div className="sc-1rkezdt-4 cwMDkh">
-                                  <div>
-                                    <div className="cxdwsz">Họ tên:</div>
-                                    <div className="l3tlg0-6 dKjQAB"> 
-                                      <input />
-                                    </div>
-                                  </div>
-                                  <div>
-                                    <div className="cxdwsz">Ngày sinh:</div>
-                                    <div className="l3tlg0-6 dKjQAB">    
-                                      <input /> 
-                                    </div>
-                                  </div>
-                                  <div>
-                                    <div className="cxdwsz">Hộ khẩu thường trú</div>
-                                    <div className="l3tlg0-6 dKjQAB">    
-                                      <input /> 
-                                    </div>
-                                  </div>
+                                <div className="sc-1rkezdt-412 cwMDkh1">
+                                  
+                                <div className="login-form">
+        
+        <div className="form">
+          <div className="center" style={{textAlign: 'center'}}>
+            <h2>Thông tin trên giấy CMND</h2>
+            <p>Chú ý các nội dung có dấu * bạn cần phải nhập</p>
+          </div>
+          <div id="registerForm" className="hh-form">
+            <form method="post" action="/Account/Register">
+              <input type="hidden" name="ReturnUrl" />
+              <input name="__RequestVerificationToken" type="hidden" defaultValue="Cy5yHDKjKiX5B5GTejT-6te2imKrlV0d_Zmokn6s3y9RPsV_Wbb9HeZLIzmjwwu9-i60tUk5WO-afmJ4UFeaZeeGDmI1" />
+              <div className="form-controls">
+                <label>Số:</label>
+                <div className="controls">
+                  <input type="text" name="UserName" id="UserName" placeholder="Số CMND *" data-required={1} />
+                </div>
+              </div>
+              <div className="form-controls">
+                <label>Họ và tên:</label>
+                <div className="controls">
+                  <input type="text" name="UserName" id="UserName" placeholder="Họ và tên *" data-required={1} />
+                </div>
+              </div>
+              <div className="form-controls">
+                <label>Sinh ngày:</label>
+                <div className="controls">
+                  <input type="text" name="Title" id="Title" placeholder="Ngày, tháng, năm sinh*" data-required={1} />
+                </div>
+              </div>
+              <div className="form-controls">
+                <label>Nguyên quán:</label>
+                <div className="controls">
+                  <input type="text" name="PasswordHash" id="PasswordHash" placeholder="Nguyên quán *" data-required={1} />
+                </div>
+              </div>
+              <div className="form-controls">
+                <label>Nơi ĐKHK thường trú:</label>
+                <div className="controls">
+                  <input type="text" name="UserName" id="UserName" placeholder="Nơi ĐKHK thường trú *" data-required={1} />
+                </div>
+              </div>
+              
+              <div className="form-controls">
+                <div className="controls submit-controls">
+                  <button type="submit">TẢI VỀ THÔNG TIN</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <link href="/Content/web/js/plugins/jquery-datepicker/datepicker.min.css" rel="stylesheet" />
+        </div>
+      </div>
+                                  
                                 </div>
                               </form>
                             </div>
