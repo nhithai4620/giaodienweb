@@ -1,5 +1,5 @@
 
-function Header() {
+function CMND() {
   return (
       <div>
         
@@ -193,7 +193,7 @@ function Header() {
         <div className="form">
           <div className="center" style={{textAlign: 'center'}}>
             <h2>Thông tin trên giấy CMND</h2>
-            <p>Chú ý các nội dung có dấu * bạn cần phải nhập</p>
+            {/* <p>Chú ý các nội dung có dấu * bạn cần phải nhập</p> */}
           </div>
           <div id="registerForm" className="hh-form">
             <form method="post" action="/Account/Register">
@@ -402,4 +402,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default CMND;

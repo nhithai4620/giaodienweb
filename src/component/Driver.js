@@ -1,5 +1,5 @@
 
-function giayPhepLaiXe() {
+function Driver() {
     return (
         <div>
           
@@ -113,7 +113,7 @@ function giayPhepLaiXe() {
                     </a></li>
                   <li className="js35eu-0 cXgXUQ">
                     <div className="js35eu-4 cXOKlA">›</div>
-                    <div className="js35eu-6 cYfDtS">Thẻ sinh viên</div>
+                    <div className="js35eu-6 cYfDtS">GIẤY PHÉP LÁI XE</div>
                   </li>
                 </ol>
                 <div className="sc-1ttxsn1-0 fxCLCz">
@@ -125,7 +125,7 @@ function giayPhepLaiXe() {
                               </path>
                             </svg></div>
                         </span>
-                        <h1 className="sc-17y9jfw-2 lpnhkH">Trích xuất thông tin từ thẻ sinh viên</h1>
+                        <h1 className="sc-17y9jfw-2 lpnhkH">Trích xuất thông tin từ ảnh</h1>
                       </div>
                       <h2 className="sc-17y9jfw-3 lpvDOQ">Trích xuất thông tin chi tiết từ ảnh giấy tờ cá nhân</h2>
                     </div>
@@ -192,45 +192,50 @@ function giayPhepLaiXe() {
           
           <div className="form">
             <div className="center" style={{textAlign: 'center'}}>
-              <h2>Thông tin trên thẻ sinh viên</h2>
-              <p>Chú ý các nội dung có dấu * bạn cần phải nhập</p>
+              <h2>Thông tin trên giấy phép lái xe</h2>
+              {/* <p>Chú ý các nội dung có dấu * bạn cần phải nhập</p> */}
             </div>
             <div id="registerForm" className="hh-form">
               <form method="post" action="/Account/Register">
                 <input type="hidden" name="ReturnUrl" />
                 <input name="__RequestVerificationToken" type="hidden" defaultValue="Cy5yHDKjKiX5B5GTejT-6te2imKrlV0d_Zmokn6s3y9RPsV_Wbb9HeZLIzmjwwu9-i60tUk5WO-afmJ4UFeaZeeGDmI1" />
-                
                 <div className="form-controls">
-                  <label>Mã số GPLX:</label>
+                  <label>Số:</label>
                   <div className="controls">
-                    <input type="text" name="UserName" id="UserName" placeholder="" data-required={1} />
+                    <input type="text" name="UserName" id="UserName" placeholder="Số *" data-required={1} />
                   </div>
                 </div>
                 <div className="form-controls">
-                  <label>Họ và tên:</label>
+                  <label>Họ tên:</label>
                   <div className="controls">
-                    <input type="text" name="UserName" id="UserName" placeholder="" data-required={1} />
+                    <input type="text" name="UserName" id="UserName" placeholder="Họ và tên *" data-required={1} />
                   </div>
                 </div>
                 <div className="form-controls">
                   <label>Ngày sinh:</label>
                   <div className="controls">
-                    <input type="text" name="Title" id="Title" placeholder="" data-required={1} />
+                    <input type="text" name="Title" id="Title" placeholder="Ngày, tháng, năm sinh*" data-required={1} />
                   </div>
                 </div>
                 <div className="form-controls">
                   <label>Quốc tịch:</label>
                   <div className="controls">
-                    <input type="text" name="PasswordHash" id="PasswordHash" placeholder="" data-required={1} />
+                    <input type="text" name="PasswordHash" id="PasswordHash" placeholder="Quốc tịch *" data-required={1} />
                   </div>
                 </div>
                 <div className="form-controls">
                   <label>Nơi cư trú:</label>
                   <div className="controls">
-                    <input type="text" name="UserName" id="UserName" placeholder="" data-required={1} />
+                    <input type="text" name="UserName" id="UserName" placeholder="Nơi cư trú: *" data-required={1} />
                   </div>
                 </div>
-                
+
+                <div className="form-controls">
+                  <label>Hạng:</label>
+                  <div className="controls">
+                    <input type="text" name="UserName" id="UserName" placeholder="Hạng: *" data-required={1} />
+                  </div>
+                </div>
                 
                 <div className="form-controls">
                   <div className="controls submit-controls">
@@ -404,5 +409,5 @@ function giayPhepLaiXe() {
       );
   }
   
-  export default giayPhepLaiXe;
+  export default Driver;
   

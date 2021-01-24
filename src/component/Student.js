@@ -1,5 +1,5 @@
-
-function theSinhVien() {
+import React from "react";
+function Student() {
     return (
         <div>
           
@@ -193,7 +193,7 @@ function theSinhVien() {
           <div className="form">
             <div className="center" style={{textAlign: 'center'}}>
               <h2>Thông tin trên thẻ sinh viên</h2>
-              <p>Chú ý các nội dung có dấu * bạn cần phải nhập</p>
+              {/* <p>Chú ý các nội dung có dấu * bạn cần phải nhập</p> */}
             </div>
             <div id="registerForm" className="hh-form">
               <form method="post" action="/Account/Register">
@@ -403,5 +403,5 @@ function theSinhVien() {
       );
   }
   
-  export default theSinhVien;
+  export default Student;
   
