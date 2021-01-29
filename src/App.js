@@ -12,8 +12,8 @@ import logo1 from "./logo.jpg";
 
 class App extends React.Component {
 
- constructor(props) {
-    super(props);
+ constructor() {
+    super();
     this.state = {
       selectValue: ""
     };
@@ -116,7 +116,7 @@ class App extends React.Component {
 
                             <div className="form-group">
                             	<div className="col-sm-2">
-                            		<select name="Chọn Loại Giấy" id="input" className="form-control sc-1wp4el5-0 ceBaup"  onChange={this.handleDropdownChange}> >
+                            		<select name="Chọn Loại Giấy" id="input" className="form-control sc-1wp4el5-0 ceBaup"  onChange={this.handleDropdownChange}> 
                             			<option   >---Chọn loại giấy---</option>
                                   <option   >Giấy phép lái xe</option>
                             			<option >Thẻ sinh viên</option>
