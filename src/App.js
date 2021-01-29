@@ -18,6 +18,11 @@ class App extends React.Component {
     };
 
     this.handleDropdownChange = this.handleDropdownChange.bind(this);
+
+    this.state = {
+      file: null
+    }
+      this.handleChange = this.handleChange.bind(this)
   }
 
   handleDropdownChange(e) {
@@ -25,6 +30,28 @@ class App extends React.Component {
     console.log(this.state.selectValue);
 
   }
+
+  readURL = (input) => {
+    
+    document.getElementById("bannerImg").style.display = "block";
+
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            document.getElementById('bannerImg').src =  e.target.result;
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+  
+    handleChange(event) {
+      this.setState({
+        file: URL.createObjectURL(event.target.files[0])
+      })
+    }
 
 
 
@@ -218,7 +245,7 @@ class App extends React.Component {
                             <div className="sc-1rkezdt-1 htBUFE">
                               <div className="sc-1rkezdt-2 cwvKbP" />
                               <div className="sc-1rkezdt-3 cwEgFY">
-                                <form className="sc-1oqtgb8-1 fqHzAf"><label className="sc-1oqtgb8-2 fqPWeo"><input type="file" id="__picker-input" multiple accept="application/jpg" className="sc-1oqtgb8-0 fqzcVW" />
+                                <form className="sc-1oqtgb8-1 fqHzAf"><label className="sc-1oqtgb8-2 fqPWeo"><input type="file" id="__picker-input" multiple accept="application/jpg" className="sc-1oqtgb8-0 fqzcVW"  onChange={this.handleChange} />
                                     <div className="sc-1rkezdt-4 cwMDkh">
                                       <div className="sc-1rkezdt-5 cwUZOq">
                                         <div className="sc-2xfn8l-0 bxyVaO sc-6w1ep9-0 iTXuYA"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 60">
@@ -245,10 +272,28 @@ class App extends React.Component {
                                       <div className="sc-1rkezdt-6 cxdwsz">hoặc thả các file ảnh ở đây
                                       </div>
                                       <div className="form-controls">
-                                        <div className="controls submit-controls" style={{margin: '10px'}}>
+                                       
+                                        <div className="controls submit-controls" style={{margin: '10px', display: 'block'}}>
                                           <button type="submit">BẮT ĐẦU TRÍCH XUẤT</button>
                                         </div>
+
+                                        
+                                        
                                       </div>
+
+                                      
+                                      <div className="form-controls">
+                                       
+                                      <div style={{width: '250px'}}>
+                                          <img src={this.state.file} style={{width: '100%',height: '100%',display: 'block'}}/>
+                                      </div>
+
+
+                                        
+                                        
+                                      </div>
+                                      
+                                      
                                     </div>
                                   </label>
                                   </form>
