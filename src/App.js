@@ -6,6 +6,7 @@ import theSinhVien from "./component/Student";
 import Driver from "./component/Driver";
 import CMND from "./component/CMND";
 import { Server } from "net";
+import logo1 from "./logo.jpg";
 
 
 
@@ -60,16 +61,27 @@ class App extends React.Component {
 
 
         let result = <CMND></CMND>;
+        let title1 = <h1 className="sc-17y9jfw-2 lpnhkH">Trích xuất thông tin từ chứng minh nhân dân</h1>;
+        let title2 = <div className="js35eu-6 cYfDtS">Chứng minh nhân dân</div>;
+
 
         if (this.state.selectValue === 'Giấy phép lái xe'){
+        title1 = <h1 className="sc-17y9jfw-2 lpnhkH">Trích xuất thông tin từ giấy phép lái xe</h1>;  
+        title2 = <div className="js35eu-6 cYfDtS">Giấy phép lái xe</div>
         result = <Driver></Driver>
         }
         else if (this.state.selectValue === 'Thẻ sinh viên'){
+          title1 = <h1 className="sc-17y9jfw-2 lpnhkH">Trích xuất thông tin từ thẻ sinh viên</h1>;
+          title2 = <div className="js35eu-6 cYfDtS">Thẻ sinh viên</div>
             result = <Student></Student>
         }
         else if (this.state.selectValue === 'Chứng minh nhân dân'){
+          title1 = <h1 className="sc-17y9jfw-2 lpnhkH">Trích xuất thông tin từ chứng minh nhân dân</h1>;
+          title2 = <div className="js35eu-6 cYfDtS">Chứng minh nhân dân</div>;
            result = <CMND></CMND>
         }
+
+        
         // if(product.status){
         //   result = <Product 
         //               key = {product.id}
@@ -96,7 +108,7 @@ class App extends React.Component {
                       <div className="sc-1sjqft3-1 ckHxed">
                         <div className="sc-1sjqft3-2 ckPTIm">
                           <div className="sc-168sfod-0 hiSbSb"><a className="lqkt1b-0 fdItuc sc-168sfod-1 hjaywk" href="/vi" title="Smallpdf">
-                              <div className="sc-168sfod-3 hjrrEC" id="__cond-221668"><img className="sc-168sfod-2 hjiVat"  alt="Smallpdf logo" />
+                              <div className="sc-168sfod-3 hjrrEC" id="__cond-221668"><img className="sc-168sfod-2 hjiVat" src={logo1}  alt="Smallpdf logo" />
                               </div>
                             </a></div>
                           <div className="sc-14iqfbv-0 bRlYaZ">
@@ -216,7 +228,7 @@ class App extends React.Component {
                     </a></li>
                   <li className="js35eu-0 cXgXUQ">
                     <div className="js35eu-4 cXOKlA">›</div>
-                    <div className="js35eu-6 cYfDtS">Thẻ sinh viên</div>
+                    {title2}
                   </li>
                 </ol>
                 <div className="sc-1ttxsn1-0 fxCLCz">
@@ -228,7 +240,7 @@ class App extends React.Component {
                               </path>
                             </svg></div>
                         </span>
-                        <h1 className="sc-17y9jfw-2 lpnhkH">Trích xuất thông tin từ thẻ sinh viên</h1>
+                        { title1 }
                       </div>
                       <h2 className="sc-17y9jfw-3 lpvDOQ">Trích xuất thông tin chi tiết từ ảnh giấy tờ cá nhân</h2>
                     </div>
